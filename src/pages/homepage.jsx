@@ -31,7 +31,7 @@ const HomePage = () => {
     return ( 
         <div className="w-full bg-black py-6 text-white min-h-[90vh] flex flex-col justify-center items-center p-4">
             
-            <div className="flex flex-wrap gap-6 justify-start items-center">
+            <div className="flex flex-wrap gap-5 justify-start items-center">
             {songs?.map((song) => (
                 <Card title={song.name} cover={song.album.images[0].url} artists={song.artists} listen={song.preview_url}/>
             ))}
