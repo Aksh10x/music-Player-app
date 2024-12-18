@@ -1,0 +1,38 @@
+.progressBar{
+    --bar-bg: white;
+    --seek-before-width: 0;
+    --seek-before-color: rgb(86, 207, 86);
+
+    appearance: none;
+    background: gray;
+    height: 8px;
+    border-radius: 4px;
+    width: 300px;
+    
+}
+
+.progressBar::before{
+    content: "";
+    height:8px;
+    width: var(--seek-before-width);
+    background-color: var(--seek-before-color);
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    position: absolute;
+    top:0;
+    left:0;
+    
+    cursor: pointer;
+}
+
+.progressBar::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width:13px;
+    height:13px;
+    border-radius: 6.5px;
+    z-index: 100;
+    position: relative;
+    background-color: white ;
+    cursor:pointer;
+    box-sizing: border-box;
+}

@@ -9,7 +9,7 @@ const HomePage = () => {
     const [songs,setSongs] = useState(null);
 
     const FetchTracks = async () => {
-        const res = await fetch(`https://v1.nocodeapi.com/aksh10x/spotify/XfcPehrZWYlKRxpo/search?q=${name}&type=track`);
+        const res = await fetch(`https://v1.nocodeapi.com/hellosir/spotify/gIBTBZkiGdhExKXz/search?q=${name}&type=track`);
         const data = await res.json();
         setSongs(data?.tracks?.items);
     };

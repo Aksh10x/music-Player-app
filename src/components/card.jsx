@@ -4,11 +4,14 @@ import playIcon from '../assets/play-button.png';
 
 const Card = ({title, cover, artists, listen}) => {
 
-    const {setAudio, isPlaying, setIsPlaying} = useContext(SongContext);
+    const {setAudio, isPlaying, setIsPlaying,setSongTitle, setSongCover, setSongArtist} = useContext(SongContext);
     const Artists = artists.map((artist) => artist.name );
     const handleClick = () => {
         setIsPlaying(true);
         setAudio(listen);
+        setSongCover(cover);
+        setSongTitle(title);
+        setSongArtist(Artists);
     }
     return ( 
         <div className="w-[15.25%] text-sm cursor-pointer bg-white bg-opacity-10 p-4 h-[45vh] gap-1 flex flex-col rounded-lg hover:scale-105 hover:bg-opacity-15 transition-all group">

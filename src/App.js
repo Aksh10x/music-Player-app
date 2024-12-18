@@ -2,7 +2,7 @@ import Navbar from "./components/navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/homepage";
 import { SongProvider } from "./songcontext";
-import Playback from "./components/playback";
+import Playback from "./components/playback/playback";
 
 function App() {
   return (
