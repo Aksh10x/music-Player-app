@@ -78,7 +78,7 @@ const Playback = () => {
 
                 <audio ref={audioPlayer} onLoadedMetadata={onLoadedMetadata} src={audio} preload="metadata"></audio>
 
-                <button onClick={handleClick} className="text-5xl mr-2 text-green-500 bg-white rounded-full">
+                <button onClick={handleClick} className="text-5xl hover:scale-105 mr-2 text-green-500 bg-white rounded-full">
                     {isPlaying ? <FaCirclePause/> : <FaCirclePlay/>}
                 </button>
                     
